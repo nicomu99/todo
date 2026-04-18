@@ -7,4 +7,18 @@ MainListView {
     height: 5;
     margin: 1;
     padding: 1;
+    align-vertical: middle;
+}
+
+MainListView:focus {
+    background: white;
+}
+
+#update {
+    dock: right;
+}
+
+.heading {
+    text-style: bold;
+    text-align: center;
 }

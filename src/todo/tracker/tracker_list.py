@@ -3,8 +3,8 @@ class TrackerList:
     # what properties each ListEntry has
     # and maybe metadata
     def __init__(
-        self
+        self,
+        name: str
     ):
-        self.name = "Private"
+        self.name = name
         self.headers = ("id", "name", "description")
-

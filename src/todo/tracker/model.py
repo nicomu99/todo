@@ -1,5 +1,6 @@
 from .tracker_list import TrackerList
 
+
 class Model:
     def __init__(self):
-        self.lists = [TrackerList()]
+        self.lists = [TrackerList("Private"), TrackerList("Work")]

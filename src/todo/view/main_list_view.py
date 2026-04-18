@@ -1,13 +1,13 @@
 from textual.app import ComposeResult
-from textual.containers import HorizontalGroup
-from textual.widgets import Static
+from textual.containers import HorizontalGroup, Center
+from textual.widgets import Static, Button
 
 
 class MainListView(HorizontalGroup):
     def __init__(self, name: str):
-        super().__init__()
-        self.title = name
+        super().__init__(name=name)
+        # self.can_focus = True
 
     def compose(self) -> ComposeResult:
-        yield Static(self.title)
-        yield
+        yield Center(Static(self.name, classes="heading"))
+        yield Button("Open", variant="success", id="update")

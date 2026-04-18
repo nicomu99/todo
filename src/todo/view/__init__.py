@@ -1,7 +1,5 @@
-from .list_view import ListView
-from .main_list_view import MainListView
+from .home_screen import HomeScreen
 
 __all__ = [
-    "ListView",
-    "MainListView"
+    "HomeScreen"
 ]

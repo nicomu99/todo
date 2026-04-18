@@ -1,9 +1,8 @@
 from textual.app import App, ComposeResult
-from textual.containers import Container, VerticalScroll
-from textual.widgets import Footer, Header
 
 from .tracker import Model
-from .view import ListView, MainListView
+from .view import HomeScreen
+
 
 # from .view import View
 
@@ -14,17 +13,14 @@ class Controller(App):
         ("d", "toggle_dark", "Toggle dark mode"),
         ("c", "create_list", "Create new TODO list"),
     ]
+    SCREENS = {"HomeScreen": HomeScreen}
 
     def __init__(self):
         super().__init__()
         self.model = Model()
 
-    def compose(self) -> ComposeResult:
-        yield Header()
-        yield Footer()
-        with VerticalScroll(id="container"):
-            for list in self.model.lists:
-                yield MainListView(list.name)
+    def on_mount(self) -> ComposeResult:
+        self.push_screen(HomeScreen(self.model.lists))
 
     def action_toggle_dark(self) -> None:
         """An action to toggle dark mode."""
