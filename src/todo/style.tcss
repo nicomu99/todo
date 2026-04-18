@@ -1,0 +1,10 @@
+#container {
+    height: 100%;
+}
+
+MainListView {
+    background: $boost;
+    height: 5;
+    margin: 1;
+    padding: 1;
+}
