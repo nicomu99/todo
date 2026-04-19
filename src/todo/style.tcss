@@ -22,3 +22,9 @@ MainListView:focus {
     text-style: bold;
     text-align: center;
 }
+
+.text-input-wrapper {
+    margin: 1;
+    padding: 1;
+    align-vertical: middle;
+}
