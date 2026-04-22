@@ -9,8 +9,8 @@ class TrackerList:
     def __init__(
         self,
         name: str,
-        columns: list[ColumnProperty] | None,
-        entries: ListEntry | None
+        columns: list[ColumnProperty] | None = None,
+        entries: ListEntry | None = None
     ):
         self.name = name
         self.columns = columns
